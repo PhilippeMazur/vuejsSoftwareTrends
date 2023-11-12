@@ -15,6 +15,7 @@ onMounted(() => {
 </script>
 
 <template>
+  <HomePageComponent :cafes="cafeCollection"></HomePageComponent>
   <p v-for="cafe in cafeCollection">{{cafe.location}}</p>
 </template>
 

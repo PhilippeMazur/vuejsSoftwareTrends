@@ -1,17 +1,17 @@
 <script>
-
-props: {
-    cafes: {
-        type: Array;
-        required: true
-    }
+export default {
+ props: {
+   cafes: {
+     type: Array,
+     required: true
+   }
+ }
 }
-
 </script>
 
 <template>
     <div class="hpc">
-        <p v-for="cafe in cafes" :key="cafe.id">{{cafe.location}}</p>
+        <p v-for="cafe in cafes">{{cafe.location}}</p>
     </div>
 </template>
 
