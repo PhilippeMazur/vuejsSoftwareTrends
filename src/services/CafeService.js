@@ -1,11 +1,21 @@
-import { collection, query, where, getDocs, getDoc, onSnapshot } from "firebase/firestore";
-import { useFirestore } from "vuefire";
+import { collection, query, where, getDocs, getDoc, onSnapshot, addDoc } from "firebase/firestore";
+import { useFirestore, useCollection } from "vuefire";
 
-const getData = async (collectionList) => {
-    const db = useFirestore()
-    const q = query(collection(db, "cafes"));
-    
-    const querySnapshot = await getDocs(q);
+const db = useFirestore()
+const q = query(collection(db, "cafes"));
+
+
+const fillWithData = async (list) => {
+    list.value = await useCollection(collection(db, 'cafes'))
+}
+
+const addToCafes = async (cafe) => {
+    await addDoc(collection(db,'cafes'), cafe)
+}
+
+/* ORIGINAL QUERY
+const getData = (collectionList) => {
+    const querySnapshot = getDocs(q);
     onSnapshot(q, (querySnapshot) => {
         collectionList.value = [];
         querySnapshot.forEach((doc) => {
@@ -13,14 +23,21 @@ const getData = async (collectionList) => {
           
         });
         collectionList.value.forEach((cafe) => {
-         console.log(cafe);
         })
     })
-
-    }
+}
+*/
 
 export default {
-    getCafes(cafeCollection) {
-        getData(cafeCollection);
+    /*
+     getCafes(collectionList) {
+        getData(collectionList)
+    },*/
+    getData(list) {
+        fillWithData(list)
+    },
+    addData(cafe) {
+        addToCafes(cafe)
     }
+
 }
