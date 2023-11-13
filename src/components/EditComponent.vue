@@ -1,9 +1,3 @@
-<template>
-  <div class="box">
-    <p>{{cafe.location}}</p>
-  </div>
-</template>
-
 <script setup>
 import CafeService from '../services/CafeService';
 import {ref, onMounted} from 'vue'
@@ -27,9 +21,18 @@ onMounted( async () => {
 
     console.log(cafe.value)
 })
-
-
 </script>
+
+<template>
+  <div class="box">
+    <div v-if="cafe != null">
+      <p>{{cafe.location}}</p>
+    </div>
+    <div v-else>
+      <p>Loading...</p>
+    </div>
+  </div>
+</template>
 
 <style>
 .box {

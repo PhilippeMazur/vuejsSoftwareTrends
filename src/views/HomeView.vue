@@ -4,6 +4,10 @@ import { collection, query, where, getDocs, getDoc } from "firebase/firestore";
 import { useCollection, useFirestore } from "vuefire";
 import { ref, onMounted, watchEffect  } from "vue";
 import CafeService from '../services/CafeService';
+import CurrentCafes from '../components/CurrentCafes.vue';
+import Navigation from '../components/Navigation.vue'
+import Introduction from '@/components/Introduction.vue'
+import WhyILoveST from '@/components/WhyILoveST.vue'
 
 let newCafeObject = ref({
   price: 0,
@@ -31,7 +35,13 @@ const addCafe = (async () => {
 </script>
 
 <template>
-  <HomePageComponent :cafes="amazingList.value" :newCafeObject="newCafeObject" @add-cafe="addCafe"></HomePageComponent>
+  <Navigation></Navigation>
+  <Introduction></Introduction>  
+  <WhyILoveST></WhyILoveST>
+  <!--
+  <CurrentCafes :cafes="amazingList.value"></CurrentCafes>
+  <HomePageComponent :newCafeObject="newCafeObject" @add-cafe="addCafe"></HomePageComponent>
+  -->
 </template>
 
 <style scoped>
