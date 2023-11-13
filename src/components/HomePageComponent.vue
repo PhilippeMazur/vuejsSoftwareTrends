@@ -26,7 +26,12 @@ export default {
 
 <template>
     <div class="hpc">
-        <p v-for="cafe in cafes">{{cafe.location}}</p>
+      <div class="object" v-for="cafe in cafes">
+        <p >{{cafe.location}}</p>
+        <router-link :to="`/cafe/${cafe.id}`">
+          <button>Go to Event</button>
+        </router-link>
+      </div>
     </div>
     <div class="cafeForm">
       <form @submit.prevent="addProduct">
@@ -53,6 +58,8 @@ export default {
     width: min(90%, 40rem);
     margin: auto;
     background-color: rgb(184, 184, 184);
+    display: flex;
+    flex-direction: column;
 }
 .cafeForm {
   height: 10rem;
@@ -61,5 +68,10 @@ export default {
   background-color: rgb(223, 223, 223);
   margin-top: 2rem;
 
+}
+
+.object {
+  display: flex;
+  flex-direction: row;
 }
 </style>
