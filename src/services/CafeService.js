@@ -18,7 +18,6 @@ const getById = async (id) => {
     const res = await doc(collection(db, 'cafes'), id)
     const docSnap = await getDoc(res)
     const answer = docSnap.data()
-    console.log(answer)
 
     return answer
  }
@@ -49,7 +48,7 @@ export default {
         addToCafes(cafe)
     },
     getCafeById(id) {
-        getById(id)
+        return getById(id)
     }
 
 }

@@ -1,6 +1,6 @@
 <template>
   <div class="box">
-    <p>test</p>
+    <p>{{cafe.location}}</p>
   </div>
 </template>
 
@@ -16,11 +16,17 @@ const props = defineProps({
     }
 })
 
-onMounted(async () => {
-    cafe.value = await CafeService.getCafeById(props.id)
-})
+onMounted( async () => {
+    await CafeService.getCafeById(props.id)
+    .then(response => {
+      cafe.value = response;
+    })
+    .catch(error => {
+      console.log(error);
+    });
 
-console.log(cafe.value)
+    console.log(cafe.value)
+})
 
 
 </script>
