@@ -31,6 +31,9 @@ onMounted(() => {
 
 
 <style scoped>
+p {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
 .body {
     margin-top: 2rem;
     width: 100%;
@@ -53,6 +56,7 @@ onMounted(() => {
     height: auto;
     margin:auto;
     border: 3px solid black;
+    transition: .2s;
 }
 
 img {
@@ -77,5 +81,11 @@ img {
     margin-bottom: .5rem;
 }
 
+.card:hover {
+    transition: .2s;
+    box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.75);
+-webkit-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.75);
+}
 
 </style>
