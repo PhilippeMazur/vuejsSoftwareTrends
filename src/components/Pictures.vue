@@ -69,7 +69,9 @@ export default {
 .body {
     width: 100%;
     height: 25rem;
-    background-color: rgb(0, 174, 255);
+    background-color: rgb(151, 222, 255);
+    border-top: 3px solid rgb(128, 181, 255);
+    border-bottom: 3px solid rgb(128, 181, 255);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -95,14 +97,14 @@ img {
     border-radius: 50%;
 }
 .random h1 {
-    color: white;
+    color: rgb(0, 0, 82);
     font-family: Poppins;
     font-weight: 1000;
     font-size: 2rem;
     margin-bottom: 2rem;
 }
 .random p {
-    color: white;
+    color: rgb(0, 0, 82);
     font-size: 1.5rem;
     font-weight: 100;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;

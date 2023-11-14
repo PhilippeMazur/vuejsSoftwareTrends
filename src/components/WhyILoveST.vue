@@ -52,7 +52,7 @@
     font-family: Poppins;
     font-weight: 1000;
     font-size: 2rem;
-    padding-bottom: 2rem;
+    padding-bottom: 1rem;
 }
 .title {
     width: min(80%, 25rem);
