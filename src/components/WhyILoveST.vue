@@ -15,7 +15,7 @@
 
 <style scoped>
 .container {
-    background-color: black;
+    background-color: white;
     background-size: 25rem;
     background-position: left;
     
@@ -40,9 +40,7 @@
     width: 25rem;
     border-radius: 20px;
     background-color: rgb(255, 255, 255);
-    box-shadow: -1px -1px 14px 2px white;
--webkit-box-shadow: -1px -1px 14px 2px white;
--moz-box-shadow: -1px -1px 14px 2px white;
+
 }
 .t1 {
     padding-top: 2rem;
