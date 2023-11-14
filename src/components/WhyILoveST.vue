@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <div class="title">
-        <h1 class="t1">Why do i love</h1>
+        <h1 class="t1">Why do I love</h1>
         <h1 class="t2">Software Trends</h1>
     </div>
     <div class="textContainer">

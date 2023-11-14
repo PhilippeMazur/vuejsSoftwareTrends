@@ -16,6 +16,8 @@
 nav {
   background-color: #3DD6A0;
   overflow: hidden;
+  height: 3rem;
+
 }
 
 nav ul {
@@ -37,6 +39,7 @@ nav li a {
   font-family: Poppins;
   color: black;
   font-weight: 600;
+  font-size: 1.5rem;
 }
 
 nav li a:hover {

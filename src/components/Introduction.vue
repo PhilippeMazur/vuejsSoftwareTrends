@@ -1,18 +1,23 @@
 
 <template>
-    <img src="@/assets/space.jpg" alt="" class="foregroundImage">
-  <div class="intro-container">
-    <div class="introText">
-        <h1>I LOVE</h1>
-        <h2>SOFTWARE TRENDS</h2>
+    <div class="body">
+        <img src="@/assets/space.jpg" alt="" class="foregroundImage">
+        <div class="intro-container">
+          <div class="introText">
+              <h1>I LOVE</h1>
+              <h2>SOFTWARE TRENDS</h2>
+          </div>
+          <div class="image">
+              <img src="@/assets/OIG-removebg-preview.png" alt="" class="animatedImg">
+          </div>
+        </div>
     </div>
-    <div class="image">
-        <img src="@/assets/OIG-removebg-preview.png" alt="" class="animatedImg">
-    </div>
-  </div>
+
 </template>
 
 <style scoped>
+.body {
+}
 h1, h2 {
     font-family: Permanent Marker;
 }
@@ -26,27 +31,31 @@ h2 {
 }
 .intro-container {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     gap: 2rem;
     height: 20rem;
     width: 100%;
     background-color: #051914;
+    width: min(90%, 50rem);
+    margin: auto;
+
 }
 
 .introText {
     z-index: 1;
-    padding-left: 6rem;
     padding-top: 4rem;
     width: min(90%, 25rem);
-    height: auto;
+    height: 15rem;
+    padding-left: 5rem;
 }
 .image {
-    width: min(90%, 25rem);
-    height: 40%;
+    width: min(70%, 25rem);
+    height: 18rem;
+    z-index: 1;
+    position: inherit;
 }
 .animatedImg {
-    width: 450px;
-    position: absolute;
+    width: 400px;
     top: 1rem;
     right: 2rem;
     animation: rotate 2s infinite;

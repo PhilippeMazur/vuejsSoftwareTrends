@@ -36,8 +36,11 @@ const addCafe = (async () => {
 
 <template>
   <Navigation></Navigation>
-  <Introduction></Introduction>  
-  <WhyILoveST></WhyILoveST>
+  <div class="body">
+    <Introduction></Introduction>  
+    <WhyILoveST></WhyILoveST>
+  </div>
+
   <!--
   <CurrentCafes :cafes="amazingList.value"></CurrentCafes>
   <HomePageComponent :newCafeObject="newCafeObject" @add-cafe="addCafe"></HomePageComponent>
@@ -45,5 +48,4 @@ const addCafe = (async () => {
 </template>
 
 <style scoped>
-
 </style>
