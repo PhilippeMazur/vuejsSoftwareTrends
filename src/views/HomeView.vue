@@ -8,6 +8,7 @@ import CurrentCafes from '../components/CurrentCafes.vue';
 import Navigation from '../components/Navigation.vue'
 import Introduction from '@/components/Introduction.vue'
 import WhyILoveST from '@/components/WhyILoveST.vue'
+import Pictures from '../components/Pictures.vue';
 
 let newCafeObject = ref({
   price: 0,
@@ -38,6 +39,7 @@ const addCafe = (async () => {
   <div class="body">
     <Introduction></Introduction>  
     <WhyILoveST></WhyILoveST>
+    <Pictures></Pictures>
   </div>
 
   <!--
