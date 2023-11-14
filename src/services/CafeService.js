@@ -6,9 +6,14 @@ const db = useFirestore()
 const q = query(collection(db, "cafes"));
 
 
-const fillWithData = async (list) => {
-    list.value = await useCollection(collection(db, 'cafes'))
+const fillWithData = async () => {
+
+    const data = await useCollection(collection(db, 'cafes'));
+    if(data != null) {
+        return data;
+    }
 }
+fillWithData()
 
 const addToCafes = async (cafe) => {
     await addDoc(collection(db,'cafes'), cafe)
@@ -21,28 +26,23 @@ const getById = async (id) => {
 
     return answer
  }
-/* ORIGINAL QUERY
-const getData = (collectionList) => {
-    const querySnapshot = getDocs(q);
+
+ const getData = (collectionList) => {
     onSnapshot(q, (querySnapshot) => {
         collectionList.value = [];
         querySnapshot.forEach((doc) => {
             collectionList.value.push(doc.data())
-          
         });
-        collectionList.value.forEach((cafe) => {
-        })
-    })
-}
-*/
+    });
+ }
 
 export default {
     /*
      getCafes(collectionList) {
         getData(collectionList)
     },*/
-    getData(list) {
-        fillWithData(list)
+    getData(collectionList) {
+        getData(collectionList)
     },
     addData(cafe) {
         addToCafes(cafe)

@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import EditComponent from '../components/EditComponent.vue'
+import CafesView from '../views/CafesView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -11,10 +12,10 @@ const router = createRouter({
       component: HomeView
     },
     {
-      path: '/cafe/:id',
+      path: '/cafes',
       props: true,
-      name: 'cafe',
-      component: EditComponent
+      name: 'cafes',
+      component: CafesView
     }
   ]
 })

@@ -64,6 +64,9 @@ export default {
   width: 25rem;
   height: 20rem;
   background-color: white;
+  box-shadow: 0px 0px 6px 4px white;
+  -webkit-box-shadow: 0px 0px 6px 4px white;
+  -moz-box-shadow: 0px 0px 6px 4px white;
 }
 
 .body {

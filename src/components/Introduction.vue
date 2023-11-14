@@ -6,7 +6,7 @@
         <nav>
             <ul>
               <li><a href="#">Home</a></li>
-              <li><a href="#">Coffee Shops</a></li>
+              <li><a href="cafes">Cafes</a></li>
               <li><a href="#">About</a></li>
             </ul>
           </nav>
@@ -108,6 +108,7 @@ p {
     height: 25rem;
     z-index: 1;
     position: inherit;
+    
 }
 .animatedImg {
     width: 400px;

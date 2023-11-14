@@ -5,7 +5,6 @@ import { useCollection, useFirestore } from "vuefire";
 import { ref, onMounted, watchEffect  } from "vue";
 import CafeService from '../services/CafeService';
 import CurrentCafes from '../components/CurrentCafes.vue';
-import Navigation from '../components/Navigation.vue'
 import Introduction from '@/components/Introduction.vue'
 import WhyILoveST from '@/components/WhyILoveST.vue'
 import Pictures from '../components/Pictures.vue';
@@ -18,14 +17,11 @@ let newCafeObject = ref({
 
 console.log(newCafeObject.value)
 
-const db = useFirestore()
-const q = query(collection(db, "cafes"));
-
 let amazingList = ref([])
 
 onMounted(async () => {
   //await CafeService.getCafes(cafeCollectionList);
-  CafeService.getData(amazingList)
+  //CafeService.getData().then(response => amazingList = respo)
 });
 
 const addCafe = (async () => {
