@@ -35,7 +35,6 @@ const addCafe = (async () => {
 </script>
 
 <template>
-  <Navigation></Navigation>
   <div class="body">
     <Introduction></Introduction>  
     <WhyILoveST></WhyILoveST>

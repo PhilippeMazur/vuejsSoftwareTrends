@@ -10,14 +10,13 @@
   </nav>
 </template>
 
-<style>
+<style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Edu+TAS+Beginner&display=swap');
 
 nav {
-  background-color: #3DD6A0;
   overflow: hidden;
   height: 3rem;
-
+  background-color: black;
 }
 
 nav ul {
@@ -37,13 +36,12 @@ nav li a {
   padding: 14px 16px;
   text-decoration: none;
   font-family: Poppins;
-  color: black;
   font-weight: 600;
   font-size: 1.5rem;
 }
 
 nav li a:hover {
-  background-color: #111;
+  background-color: #464646;
   color: white;
 }
 </style>
